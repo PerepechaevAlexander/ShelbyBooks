@@ -1,0 +1,89 @@
+.settings{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #d5d5d5;
+  background-color: azure;
+  margin: 10px 10px 0 10px;
+  padding: 5px;
+  min-width: 468px;
+}
+.settings-title{
+  font-size: 18px;
+}
+.apply-button{
+  margin-top: 5px;
+}
+
+
+
+
+.books{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 500px;
+}
+
+.book{
+  border: 1px solid #d5d5d5;
+  margin: 10px;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: flex-start;
+  align-items: self-start;
+}
+
+.about-book{
+  margin: 10px;
+  flex-grow: 10;
+}
+.about-buy{
+  margin: 10px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.about-count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.count{
+  font-size: 20px;
+}
+.add{
+  min-width: 25px;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.book-image{
+  min-width: 150px;
+  width: 150px;
+  height: 250px;
+  margin: 15px;
+}
+
+
+.title{
+  font-size: 25px;
+}
+.cost{
+  font-size: 20px;
+}
+.info{
+  font-size: 16px;
+}
+
+
+.image {
+  width: 100%;
+}
+

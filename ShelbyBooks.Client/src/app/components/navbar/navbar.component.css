@@ -1,0 +1,90 @@
+.nav{
+  background-color: palegreen;
+  min-width: 480px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.logo{
+  margin: 10px;
+  cursor: pointer;
+}
+
+.links{
+  margin: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label{
+  margin-right: 10px;
+}
+
+.link{
+  margin-right: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+}
+
+.out{
+  cursor: pointer;
+}
+
+
+
+
+
+/*
+.nav-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
+    padding: 22px;
+    color: rgb(27, 27, 27);
+    cursor: pointer;
+    text-decoration: none;
+}
+.img{
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-link {
+    margin-right: 10px;
+}
+
+
+.nav-right-auth{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+.photo{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 100px;
+    border: 2px solid black;
+}
+.login
+{
+    margin-right: 10px;
+}
+.exit {
+    margin-right: 10px;
+    cursor: pointer;
+}
+*/

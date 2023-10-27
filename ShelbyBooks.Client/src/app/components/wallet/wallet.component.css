@@ -1,0 +1,52 @@
+.wallet-page{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.wallet{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: fit-content;
+
+  border: 1px solid #d5d5d5;
+  background-color: azure;
+  margin: 10px;
+  padding: 5px;
+}
+
+.Info{
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.balance{
+  font-size: 16px;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+.button-available{
+  margin: 5px;
+  margin-top: 13px;
+  font-size: 18px;
+}
+
+.button-top-up{
+  margin: 5px;
+  margin-top: 10px;
+  font-size: 18px;
+  min-width: auto ;
+}
+
+
+.error{
+  color: red;
+  font-size: 20px;
+}
+
+

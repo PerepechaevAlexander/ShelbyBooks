@@ -1,0 +1,34 @@
+<div class="order" *ngIf="cart.length > 0">
+  <div class="order-cost">Товаров на сумму: {{cost}}</div>
+  <button class="button-create" (click)="createOrder()">Оформить заказ</button>
+
+</div>
+
+<div class="order" *ngIf="currentError.StatusCode != 0">
+  <div class="error">{{currentError.Message}}</div>
+</div>
+
+
+<div class="books" *ngFor="let book of cart">
+  <div class="book">
+
+    <div *ngIf="!book.image" class="book-image"><img class="image" src="assets/img/coverDefault.jpg"/></div>
+    <div *ngIf="book.image" class="book-image"><img class="image" src="data:image/jpeg;base64,{{book.image}}"/></div>
+    <div class="about-book">
+      <div class="title">{{book.title}}</div>
+      <div class="info">Автор: {{book.author}}</div>
+      <div class="info">Год написания: {{book.year}}</div>
+      <div *ngIf="book.isbn" class="info">Isbn: {{book.isbn}}</div>
+    </div>
+
+    <div class="about-buy">
+      <div class="cost">{{book.cost}} руб.</div>
+      <div class="about-count">
+        <div class="add" (click)="removeBook(book.id, book.quantity)"><img src="assets/img/remove.png" class="image"/></div>
+        <div class="count">{{book.quantity}}</div>
+        <div class="remove" (click)="addBook(book.id)"><img src="assets/img/add.png" class="image"/></div>
+      </div>
+    </div>
+
+  </div>
+</div>

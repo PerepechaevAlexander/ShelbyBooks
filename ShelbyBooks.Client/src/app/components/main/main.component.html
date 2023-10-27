@@ -1,0 +1,27 @@
+<div class="settings">
+  <div class="settings-title">Наличие:</div>
+  <div class="radio-button">
+      <input type="radio" name="show" value="all" checked (click)="showAll()">Все
+      <input type="radio" name="show" value="available" (click)="showAvailable()">Только в наличии
+  </div>
+</div>
+
+<div class="books" *ngFor="let book of books">
+  <div class="book" *ngIf="book.quantity > 0 || show">
+
+    <div *ngIf="!book.image" class="book-image"><img class="image" src="assets/img/coverDefault.jpg"/></div>
+    <div *ngIf="book.image" class="book-image"><img class="image" src="data:image/jpeg;base64,{{book.image}}"/></div>
+    <div class="about-book">
+      <div class="title">{{book.title}}</div>
+      <div class="info">Автор: {{book.author}}</div>
+      <div class="info">Год написания: {{book.year}}</div>
+      <div *ngIf="book.isbn" class="info">Isbn: {{book.isbn}}</div>
+    </div>
+
+    <div class="about-buy">
+      <div class="cost">{{book.cost}} руб.</div>
+      <div class="count">Осталось, шт.: {{book.quantity}}</div>
+      <div *ngIf="book.quantity > 0 && localStorage.getItem('isAuthenticated') == 'true'" class="add"><img (click)="addBook(book.id, book.quantity)" src="assets/img/cart.png" class="image"/></div>
+    </div>
+  </div>
+</div>

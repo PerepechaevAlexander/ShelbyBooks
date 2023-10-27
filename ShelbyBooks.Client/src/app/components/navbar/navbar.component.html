@@ -1,0 +1,24 @@
+<div class="nav">
+  <div class="logo">
+    <img routerLink="/" src="../../../assets/img/logo.png"/>
+  </div>
+
+  <div *ngIf="localStorage.getItem('isAuthenticated') == 'true'">
+    <div class="links">
+      <label class="label">{{localStorage.getItem('name')}}</label>
+      <a routerLink="/wallet" class="link">Кошелёк</a>
+      <a routerLink="/order" class="link">Заказы</a>
+      <a routerLink="/cart" class="link">Корзина</a>
+      <div class="out" (click)="logout()">
+        <img src="../../../assets/img/logout.png"/>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="localStorage.getItem('isAuthenticated') == 'false'">
+    <div class="links">
+      <a (click)="login()" class="link">Войти</a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="update" *ngIf="orders.length > 0">
+  <button class="button" (click)="update()">Обновить</button>
+</div>
+
+<div class="update" *ngIf="currentError.StatusCode != 0">
+  <div class="error">{{currentError.Message}}</div>
+</div>
+
+<div class="orders"  *ngFor="let order of orders">
+
+  <div class="order">
+    <div class="about-order">
+      <div class="id">Номер заказа: {{order.id}}</div>
+      <div class="status">Статус: {{order.status}}</div>
+    </div>
+
+    <div class="books" >В заказе:
+      <div class="book" *ngFor="let book of order.orderBooks">{{book.title}} - {{book.quantity}} шт.</div>
+    </div>
+
+    <div class="about-order">
+      <div class="cost">Стоимость: {{order.cost}} руб.</div>
+      <div class="buttons" *ngIf="order.status === 'Готов к выдаче'">
+        <button class="button" (click)="receive(order.id)">Получить</button>
+        <button class="button" (click)="cancel(order.id)">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+</div>

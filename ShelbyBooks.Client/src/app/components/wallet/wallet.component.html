@@ -1,0 +1,15 @@
+<div class="wallet-page">
+  <div class="wallet" *ngIf="localStorage.getItem('isAuthenticated') == 'true'">
+    <div class="Info">На счету:</div>
+    <div class="balance">{{balance}}, руб.</div>
+    <button class="button-available" (click)="TopUpAvailable()">Пополнить счёт</button>
+  </div>
+  <div class="wallet" *ngIf="topUp">
+    <div class="Info">Введите сумму:</div>
+    <div class="balance"><input  type="number" [(ngModel)]="refill">, руб.</div>
+    <button class="button-top-up" (click)="onSubmit()">Пополнить</button>
+  </div>
+  <div class="wallet" *ngIf="currentError.StatusCode != 0">
+    <div class="error">{{currentError.Message}}</div>
+  </div>
+</div>

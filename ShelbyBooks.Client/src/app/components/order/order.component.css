@@ -1,0 +1,69 @@
+.update{
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid #d5d5d5;
+  background-color: azure;
+  margin: 10px;
+  margin-bottom: 0;
+  padding: 5px;
+
+}
+.button{
+  width: 100px;
+  margin-right: 5px;
+  height: 30px;
+  font-size: 16px;
+}
+
+
+.orders{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 500px;
+}
+
+.order{
+  border: 1px solid #d5d5d5;
+  margin: 10px;
+  padding: 5px;
+  background-color: azure;
+  display: flex;
+  justify-content: space-between;
+  align-items: self-start;
+  font-size: 20px;
+}
+
+.about-order{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: self-start;
+  margin: 10px;
+}
+
+.books{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: self-start;
+  margin: 10px;
+}
+
+.cost{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+  margin-top: 0;
+}
+
+.book{
+  font-size: 16px;
+}
+
+.error{
+  color: red;
+  font-size: 20px;
+}
+
